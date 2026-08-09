@@ -1,0 +1,107 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: white;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 634px;
+    display: flex;
+}
+
+.doctor-image {
+    width: 51%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.doctor-image img {
+    width: 530px;
+    height: 634px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.form-container {
+    width: 49%;
+    padding: 25px 9% 0 1.2%;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+hr {
+    margin: 22px 0 30px;
+    border: 0;
+    border-top: 2px solid red;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-row > label {
+    font-size: 16px;
+}
+
+input[type="date"] { width: 116px; }
+input[type="time"] { width: 98px; }
+
+input[type="text"],
+input[type="tel"] {
+    height: 21px;
+    border: 1px solid #888;
+    padding: 2px 4px;
+}
+
+.two-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.query-row { align-items: start; }
+
+textarea {
+    width: 315px;
+    height: 66px;
+    resize: both;
+    border: 1px solid #888;
+}
+
+.appointment-row {
+    align-items: start;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.check-option {
+    display: block;
+    line-height: 20px;
+}
+
+button {
+    margin-left: 105px;
+    padding: 2px 7px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .page { flex-direction: column; }
+    .doctor-image, .form-container { width: 100%; }
+    .doctor-image img { max-width: 100%; }
+    .form-container { padding: 25px; }
+}
