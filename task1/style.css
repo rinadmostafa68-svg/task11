@@ -4,82 +4,102 @@
 
 body {
     margin: 0;
-    padding: 26px 6px 16px;
-    background-color: #0d1c2b;
-    font-family: Arial, sans-serif;
+    padding: 0 6px 6px;
+    background: #3b1230;
+    color: #fff7f0;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 h1 {
-    margin: 0 0 20px;
-    color: #b89b3c;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 32px;
+    margin: 24px 0 18px;
+    color: #ff7fb0;
+    font-size: 34px;
 }
 
 .intro {
-    margin: 0 0 20px;
-    color: #9a9a9a;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
+    margin: 0 0 18px;
+    font-size: 18px;
+    color: #fff0f7;
 }
 
 .travel-grid {
     display: grid;
-    grid-template-columns: 29% 22.5% 25.5% 23%;
-    grid-template-rows: repeat(3, 1fr);
-    background-color: #46659a;
-    gap: 0;
-    min-height: 445px;
-    padding: 0;
+    grid-template-columns: 29% 22.5% 26% 22.5%;
+    grid-template-rows: repeat(3, 145px);
+    background: #fff7fb;
 }
 
-.travel-grid .description {
-    display: flex;
-    align-items: center;
-    padding: 8px 3px;
+.description {
+    padding: 12px 8px;
+    background: #fff0f5;
+    color: #3b2440;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.15;
 }
 
-.description p {
-    margin: 0;
-    color: #111;
-    font-family: "Comic Sans MS", "Courier New", cursive;
-    font-size: 13px;
-    font-weight: 700;
-    font-style: italic;
-    line-height: 1.12;
+.description h2 {
+    margin: 0 0 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    color: #e83e82;
 }
+
+.description.green {
+    background: #eefaf1;
+}
+.description.green h2 { color: #21884c; }
+
+.description.orange {
+    background: #fff3e5;
+}
+.description.orange h2 { color: #e66a22; }
+
+.description.blue {
+    background: #eaf6ff;
+}
+.description.blue h2 { color: #2176bd; }
+
+.description.purple {
+    background: #f5edff;
+}
+.description.purple h2 { color: #8450b7; }
+
+.description.yellow {
+    background: #fff9e5;
+}
+.description.yellow h2 { color: #d89b18; }
 
 .travel-grid img {
     width: 100%;
-    height: 100%;
-    min-height: 0;
-    object-fit: cover;
-    border: 2px solid #111;
+    height: 145px;
     display: block;
+    object-fit: cover;
+    border: 2px solid #ffffff;
 }
 
-/* Keep the four-column arrangement on smaller screens until the layout
-   becomes too narrow, then stack the items for readability. */
-@media (max-width: 700px) {
-    body {
-        padding: 20px 10px;
-    }
+footer {
+    padding: 14px;
+    text-align: center;
+    background: #3b1230;
+    color: #ffd5e5;
+    font-size: 16px;
+}
 
+@media (max-width: 800px) {
     .travel-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
 
-    .travel-grid .description {
-        min-height: 150px;
-    }
-
+    .description,
     .travel-grid img {
-        min-height: 150px;
+        min-height: 145px;
+        height: 145px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     .travel-grid {
         grid-template-columns: 1fr;
     }
